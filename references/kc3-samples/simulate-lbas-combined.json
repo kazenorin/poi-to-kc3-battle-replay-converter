@@ -1,0 +1,1599 @@
+{
+  "battles": [
+    {
+      "data": {
+        "api_formation": [
+          14,
+          13,
+          1
+        ],
+        "api_dock_id": 1,
+        "api_maxhps": [
+          -1,
+          91,
+          82,
+          78,
+          79,
+          -1,
+          -1,
+          53,
+          70,
+          70,
+          37,
+          37,
+          37
+        ],
+        "api_nowhps": [
+          -1,
+          91,
+          82,
+          78,
+          79,
+          -1,
+          -1,
+          53,
+          70,
+          70,
+          37,
+          37,
+          37
+        ],
+        "api_ship_ke": [
+          1554,
+          1559,
+          1559,
+          1576,
+          1576,
+          1576
+        ],
+        "api_eSlot": [
+          [
+            504,
+            542,
+            543,
+            -1,
+            -1
+          ],
+          [
+            506,
+            515,
+            515,
+            -1,
+            -1
+          ],
+          [
+            506,
+            515,
+            515,
+            -1,
+            -1
+          ],
+          [
+            502,
+            545,
+            542,
+            -1,
+            -1
+          ],
+          [
+            502,
+            545,
+            542,
+            -1,
+            -1
+          ],
+          [
+            502,
+            545,
+            542,
+            -1,
+            -1
+          ]
+        ],
+        "api_nowhps_combined": [
+          -1,
+          31,
+          31,
+          57,
+          56,
+          56,
+          56,
+          33,
+          20,
+          20,
+          -1,
+          -1,
+          -1
+        ],
+        "api_maxhps_combined": [
+          -1,
+          31,
+          31,
+          57,
+          56,
+          56,
+          56,
+          33,
+          20,
+          20,
+          -1,
+          -1,
+          -1
+        ],
+        "api_ship_ke_combined": [
+          1505,
+          1501,
+          1501,
+          -1,
+          -1,
+          -1
+        ],
+        "api_eSlot_combined": [
+          [
+            504,
+            525,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            501,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            501,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "api_injection_kouku": null,
+        "api_air_base_attack": [
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 0,
+              "api_touch_plane": [
+                -1,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 36,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 225,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 225,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 187,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 187,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 1,
+              "api_touch_plane": [
+                -1,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 36,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 225,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 225,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 187,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 187,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 0,
+              "api_touch_plane": [
+                17,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 54,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                29,
+                17,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 17,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 17,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 18,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 22,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 1,
+              "api_touch_plane": [
+                -1,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 53,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 17,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 17,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 18,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 22,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                136,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 0,
+              "api_touch_plane": [
+                52,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 54,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                38,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 52,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 52,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 243,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 22,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                81,
+                0,
+                47,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "api_plane_from": [
+              [
+                7,
+                8,
+                9,
+                10
+              ],
+              [
+                -1
+              ]
+            ],
+            "api_stage1": {
+              "api_e_count": 0,
+              "api_e_lostcount": 0,
+              "api_f_count": 72,
+              "api_f_lostcount": 0,
+              "api_touch_plane": [
+                243,
+                -1
+              ],
+              "api_disp_seiku": 1
+            },
+            "api_stage2": {
+              "api_f_count": 54,
+              "api_f_lostcount": 0
+            },
+            "api_stage3": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                47,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "api_squadron_plane": [
+              {
+                "api_mst_id": 52,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 52,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 243,
+                "api_count": 18
+              },
+              {
+                "api_mst_id": 22,
+                "api_count": 18
+              }
+            ],
+            "api_stage3_combined": {
+              "api_ebak_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_edam": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_erai_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "api_ecl_flag": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          }
+        ],
+        "api_kouku": {
+          "api_plane_from": [
+            [
+              3,
+              4
+            ],
+            [
+              -1
+            ]
+          ],
+          "api_stage1": {
+            "api_e_count": 0,
+            "api_e_lostcount": 0,
+            "api_f_count": 152,
+            "api_f_lostcount": 3,
+            "api_touch_plane": [
+              59,
+              -1
+            ],
+            "api_disp_seiku": 1
+          },
+          "api_stage2": {
+            "api_e_count": 0,
+            "api_e_lostcount": 0,
+            "api_f_count": 110,
+            "api_f_lostcount": 0
+          },
+          "api_stage3": {
+            "api_ebak_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_edam": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_erai_flag": [
+              -1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "api_fbak_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_fdam": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_frai_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_ecl_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_fcl_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "api_stage3_combined": {
+            "api_ebak_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_edam": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_erai_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_fbak_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_fdam": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_frai_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_ecl_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "api_fcl_flag": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "api_opening_atack": {
+          "api_edam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_erai": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_eydam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_fdam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_frai": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_fydam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_ecl": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_fcl": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "api_hougeki1": {
+          "api_at_eflag": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "api_at_list": [
+            -1,
+            1,
+            1,
+            2,
+            4,
+            4,
+            3,
+            5
+          ],
+          "api_at_type": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_damage": [
+            -1,
+            [
+              155
+            ],
+            [
+              0
+            ],
+            [
+              83
+            ],
+            [
+              0.1
+            ],
+            [
+              11
+            ],
+            [
+              162
+            ],
+            [
+              0
+            ]
+          ],
+          "api_df_list": [
+            -1,
+            [
+              6
+            ],
+            [
+              4
+            ],
+            [
+              3
+            ],
+            [
+              5
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "api_cl_list": [
+            -1,
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "api_hougeki2": {
+          "api_at_eflag": [
+            -1
+          ],
+          "api_at_list": [
+            -1
+          ],
+          "api_at_type": [
+            -1
+          ],
+          "api_damage": [
+            -1
+          ],
+          "api_df_list": [
+            -1
+          ],
+          "api_cl_list": [
+            -1
+          ]
+        },
+        "api_raigeki": {
+          "api_edam": [
+            -1,
+            106,
+            0,
+            0,
+            0,
+            239,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_erai": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_eydam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_fdam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_frai": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            5,
+            5,
+            5,
+            5,
+            1
+          ],
+          "api_fydam": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60,
+            63,
+            58,
+            57,
+            61,
+            46
+          ],
+          "api_ecl": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "api_fcl": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "api_hougeki3": {
+          "api_at_eflag": [
+            -1
+          ],
+          "api_at_list": [
+            -1
+          ],
+          "api_at_type": [
+            -1
+          ],
+          "api_damage": [
+            -1
+          ],
+          "api_df_list": [
+            -1
+          ],
+          "api_cl_list": [
+            -1
+          ]
+        }
+      },
+      "yasen": {},
+      "mvp": [],
+      "rating": ""
+    }
+  ],
+  "fleetnum": 1,
+  "support1": 3,
+  "support2": 4,
+  "source": 1,
+  "fleet1": [
+    {
+      "equip": [
+        8,
+        8,
+        59,
+        36,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 541
+    },
+    {
+      "equip": [
+        7,
+        7,
+        59,
+        36,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 149
+    },
+    {
+      "equip": [
+        52,
+        52,
+        22,
+        22,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 466
+    },
+    {
+      "equip": [
+        52,
+        52,
+        22,
+        22,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 467
+    }
+  ],
+  "fleet2": [
+    {
+      "equip": [
+        122,
+        122,
+        29,
+        -1,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 144
+    },
+    {
+      "equip": [
+        122,
+        122,
+        29,
+        -1,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 145
+    },
+    {
+      "equip": [
+        50,
+        90,
+        59,
+        31,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 194
+    },
+    {
+      "equip": [
+        50,
+        90,
+        59,
+        31,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 319
+    },
+    {
+      "equip": [
+        50,
+        90,
+        59,
+        31,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 193
+    },
+    {
+      "equip": [
+        50,
+        90,
+        59,
+        31,
+        -1
+      ],
+      "kyouka": [],
+      "mst_id": 192
+    }
+  ],
+  "combined": 1
+}

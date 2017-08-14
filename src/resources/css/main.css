@@ -1,0 +1,123 @@
+body {
+    color: #777;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.color-error {
+    color: rgb(202, 60, 60);
+}
+
+/** Clearfix **/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/** ----------------- **/
+
+#layout {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    padding: 2.5em 2em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+    margin: 0.2em 0;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.header h2 {
+    font-weight: 300;
+    color: #ccc;
+    padding: 0;
+    margin-top: 0;
+}
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: 150px; /* left col width "#menu" */
+        left: 0;
+    }
+}
+
+/** ----------------- **/
+#paste-data {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+}
+.titles-cell > div {
+    padding: 5px
+}
+.actions-cell {
+    text-align: center;
+}
+.paste-data-row {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border: 1px dotted rgba(0, 0, 0, 0.15);
+}
+.accordion-members {
+    display: none;
+}
+.accordion-members.accordion-active {
+    display: block;
+}
+
+#image-output {
+    text-align: center;
+}

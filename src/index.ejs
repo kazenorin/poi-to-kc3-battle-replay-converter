@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+<div id="layout">
+    <div class="header">
+        <h1>Poi2KC3Kai</h1>
+        <h2>Convert Poi BattleDetail to KC3Kai Replay format</h2>
+    </div>
+
+    <div class="content">
+        <h2 class="content-subhead">Add battle data</h2>
+        <div class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list" id="data-source-menu">
+                <li class="pure-menu-item">
+                    <a href="javascript:void(0)" id="paste-data-button" class="pure-menu-link pure-button pure-button-active"
+                        data-correspondent="#paste-data">Paste Data</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="javascript:void(0)" id="upload-data-button" class="pure-menu-link pure-button"
+                       data-correspondent="#upload-data">Upload Data</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pure-g accordion-members accordion-active" id="paste-data">
+            <div class="pure-u-1" id="paste-data-container">
+                <div class="pure-g paste-data-row">
+                    <div class="pure-u-4-24 titles-cell">
+                        <div>
+                            Battle #<span class="battle-counter">1</span>
+                            <br/><span class="node-index"></span>
+                        </div>
+                    </div>
+                    <div class="pure-u-16-24 pure-form">
+                        <textarea class="pure-input-1" placeholder="Paste battle detail data here"></textarea>
+                        <div class="pure-u-1 error-message color-error" style="display: none">Error</div>
+                    </div>
+                    <div class="pure-u-4-24 actions-cell"><p><button class="pure-button remove-button pure-button-disabled">Remove</button></p></div>
+                </div>
+            </div>
+            <div class="pure-u-1 clearfix">
+                <button id="convertData" class="pure-button pure-button-primary">Convert</button>
+            </div>
+        </div>
+        <div class="pure-form accordion-members" id="upload-data">
+            <div class="dropzone pure-u-1">
+                <div class="dz-message needsclick">
+                    Drop files here or click to upload.<br>
+                    <span class="note needsclick">
+                        (Files uploaded are not stored on the server.)
+                    </span>
+                </div>
+            </div>
+            <div class="pure-u-1 clearfix">
+                <button id="loadFiles" class="pure-button pure-button-primary">Load Files</button>
+                <button id="loadSample" class="pure-button pull-right">Load Sample</button>
+            </div>
+        </div>
+        <div class="pure-form">
+            <label for="outputText" class="pure-u-1">Text Output: </label>
+            <textarea id="outputText" class="pure-input-1"></textarea>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">Image Output</div>
+            <div class="pure-u-1-4">&nbsp;</div>
+            <div class="pure-u-1-2" id="image-output"></div>
+        </div>
+    </div>
+</div>
+
+<div id="dropzone-template">
+    <div class="dz-preview dz-file-preview">
+        <div class="dz-image"><img data-dz-thumbnail /></div>
+        <div class="dz-details">
+            <div class="dz-filename" data-dz-remove><span data-dz-name></span></div>
+            <div class="dz-size" data-dz-size></div>
+        </div>
+        <div class="dz-success-mark"><span>✔</span></div>
+        <div class="dz-error-mark"><span>✘</span></div>
+        <div class="dz-error-message"><span data-dz-errormessage></span></div>
+    </div>
+</div>
+
+
+</body>
+</html>

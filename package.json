@@ -1,0 +1,33 @@
+{
+  "name": "poi-to-kc3-battle-replay-converter",
+  "version": "0.0.1",
+  "description": "Convert poi-viewer battle detail data to KC3Kai Replay format",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --env=dev --watch",
+    "build": "webpack --env=dev",
+    "build:dist": "webpack --env=prod"
+  },
+  "keywords": [],
+  "author": "kazenorin",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "bluebird": "^3.5.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "dropzone": "^5.1.1",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "pako": "^1.0.5",
+    "pure-css": "^1.0.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.4"
+  }
+}
