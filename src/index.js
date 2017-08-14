@@ -180,7 +180,10 @@ function performConversion(inputData) {
         outputImage.src = encodedUrl;
 
         $("#image-output").html("").append(outputImage);
-        $("#outputText").val(stringDataDisplay);
+        $("#output-text").val(stringDataDisplay);
+
+        $("#output-text-container").show();
+        $("#image-output-container").show();
 
         scrollTo("#image-output")
     });
@@ -189,3 +192,7 @@ function performConversion(inputData) {
 function scrollTo(hash, speed) {
     $('html, body').animate({scrollTop: $(hash).offset().top || 0}, speed);
 }
+
+setTimeout(()=> {
+    $(".cloaked").removeClass("cloaked");
+});

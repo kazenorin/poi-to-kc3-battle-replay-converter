@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POI Battle Detail to KC3Replay Converter</title>
+    <style type="text/css">.cloaked{display: none}</style>
 </head>
 <body>
 
-<div id="layout">
+<div id="layout" class="cloaked">
     <div class="header">
         <h1>Poi2KC3Kai</h1>
         <h2>Convert Poi BattleDetail to KC3Kai Replay format</h2>
@@ -61,19 +62,19 @@
                 <button id="loadSample" class="pure-button pull-right">Load Sample</button>
             </div>
         </div>
-        <div class="pure-form">
-            <label for="outputText" class="pure-u-1">Text Output: </label>
-            <textarea id="outputText" class="pure-input-1"></textarea>
+        <div class="pure-form" id="output-text-container" style="display: none">
+            <label for="output-text" class="pure-u-1">Text Output: </label>
+            <textarea id="output-text" class="pure-input-1"></textarea>
         </div>
-        <div class="pure-g">
-            <div class="pure-u-1">Image Output</div>
+        <div class="pure-g" id="image-output-container" style="display: none">
+            <div class="pure-u-1">Image Output: </div>
             <div class="pure-u-1-4">&nbsp;</div>
             <div class="pure-u-1-2" id="image-output"></div>
         </div>
     </div>
 </div>
 
-<div id="dropzone-template">
+<div id="dropzone-template" class="cloaked">
     <div class="dz-preview dz-file-preview">
         <div class="dz-image"><img data-dz-thumbnail /></div>
         <div class="dz-details">
