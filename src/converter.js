@@ -5,15 +5,15 @@ const defaultSortieId = 1;
 const defaultBattleId = 10000;
 
 export default function (poiDataList) {
-
+    const escortFleet = getFleet(poiDataList, PoiFleets.escort);
     return {
         "id": defaultSortieId,
         "world": getWorld(poiDataList),
         "mapnum": getMap(poiDataList),
         "fleetnum": 1,
-        "combined": 0,                      // 0 or 1 boolean flag
+        "combined": escortFleet && escortFleet.length ? 1 : 0,
         "fleet1": getFleet(poiDataList, PoiFleets.main),
-        "fleet2": getFleet(poiDataList, PoiFleets.escort),
+        "fleet2": escortFleet,
         "fleet3": getFleet(poiDataList, PoiFleets.support),
         "fleet4": getFleet(poiDataList, PoiFleets.support, true),
         "support1": checkHasNodeSupport(poiDataList),
