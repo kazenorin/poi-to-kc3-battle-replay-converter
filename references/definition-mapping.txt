@@ -32,6 +32,21 @@ KC3K's 'battles.$index' vs Poi's 'packet':
     "id": 11321                                                 // Not mappable, unique ID for this battle by KC3K
 }
 
+KC3K's 'lbas' field:
+{
+    "rid": "Integer:fleet.LBAC[$index].api_rid",
+    "range": "Integer:fleet.LBAC[$index].api_distance",
+    "action": "Integer:fleet.LBAC[$index].api_action_kind",
+    "planes":[{
+        "mst_id": "Integer:fleet.LBAC[$index].api_plane_info[$index].poi_slot.api_slotitem_id",
+        "count": "Integer:fleet.LBAC[$index].api_plane_info[$index].api_count",
+        "stars": "Integer:fleet.LBAC[$index].api_plane_info[$index].poi_slot.api_level",
+        "ace": "Integer:fleet.LBAC[$index].api_plane_info[$index].poi_slot.api_alv",
+        "state": "Integer:fleet.LBAC[$index].api_plane_info[$index].api_state",
+        "morale": "Integer:fleet.LBAC[$index].api_plane_info[$index].api_cond"
+    }]
+}
+
 All KC3K fields:
 {
     "diff": 0,                          // Seems to always be zero for single-fleet battles, doesn't seems required
@@ -46,9 +61,10 @@ All KC3K fields:
     "fleet4": ["..."],
     "support1": 0,                      // fleet index used in node support, 0 = no support
     "support2": 0,                      // fleet index used in boss support, 0 = no support
-    "lbas": [],                         // format unknown
+    "lbas": ["..."],
     "time": "Integer:(time / 1000)",
     "hq": "12345678",                   // player id?
     "id": 5673,
     "battles": ["..."]
 }
+

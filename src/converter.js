@@ -18,7 +18,7 @@ export default function (poiDataList) {
         "fleet4": getFleet(poiDataList, PoiFleets.support, true),
         "support1": checkHasNodeSupport(poiDataList),
         "support2": checkHasBossSupport(poiDataList),
-        "lbas": [],                         // format unknown
+        "lbas": getLbas(poiDataList),
         "time": getSortieTime(poiDataList),
         "battles": getBattles(poiDataList)
     }
@@ -66,6 +66,23 @@ function convertFleet(poiFleetData) {
 
         return output;
     }) : [];
+}
+
+function getLbas(poiDataList) {
+    const poiLbac = _.get(poiDataList, [0, "fleet", "LBAC"]);
+    return poiLbac ? _.compact(_.map(poiLbac, lbac => lbac && {
+        "rid": lbac.api_rid,
+        "range": lbac.api_distance,
+        "action": lbac.api_action_kind,
+        "planes": _.map(lbac.api_plane_info, poiPlaneInfo => poiPlaneInfo && {
+            "mst_id": _.get(poiPlaneInfo, ["poi_slot", "api_slotitem_id"]),
+            "count": _.get(poiPlaneInfo, "api_count"),
+            "stars": _.get(poiPlaneInfo, ["poi_slot", "api_level"]),
+            "ace": _.get(poiPlaneInfo, ["poi_slot", "api_alv"]),
+            "state": _.get(poiPlaneInfo, "api_state"),
+            "morale": _.get(poiPlaneInfo, "api_cond")
+        })
+    })) : []
 }
 
 function checkHasNodeSupport(poiDataList) {
