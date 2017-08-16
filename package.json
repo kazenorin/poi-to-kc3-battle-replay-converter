@@ -1,6 +1,6 @@
 {
   "name": "poi-to-kc3-battle-replay-converter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Convert poi-viewer battle detail data to KC3Kai Replay format",
   "main": "index.js",
   "scripts": {
