@@ -77,8 +77,12 @@ firstPasteDataRow.find("textarea").on("change", function dataPasteHandler(e) {
         const nodeIndex = parsedData.map && parsedData.map.join("-");
         parentRow.find(".node-index").html(nodeIndex);
 
-        pasteDataContainer.append(pasteDataRowTemplate.clone(true));
-        updateRowCounter();
+        // Timeout to Allow "Convert Button" to be clicked
+        setTimeout(()=>{
+            pasteDataContainer.append(pasteDataRowTemplate.clone(true));
+            updateRowCounter();
+        }, 200);
+
     } catch (e) {
         if ('SyntaxError' === e.name) {
             reportError(errorElm, MSG_INVALID_BATTLE_DETAIL_DATA);
@@ -88,6 +92,8 @@ firstPasteDataRow.find("textarea").on("change", function dataPasteHandler(e) {
     }
 });
 const pasteDataRowTemplate = firstPasteDataRow.clone(true);
+
+const outputContainer = $("#output-container");
 
 function updateRowCounter() {
     pasteDataContainer.find(".battle-counter").each((i, elm) => {
@@ -141,6 +147,8 @@ $("#loadSample").on("click", () => {
 });
 
 $("#convertData").on("click", () => {
+
+    // Timeout to Allow onChange to process
     setTimeout(()=> {
 
         const inputData = [];
@@ -168,10 +176,7 @@ function isValidPoiData(inputData) {
 
 function performConversion(inputData) {
 
-    const convertedData = converter(inputData);
-
-    const stringData = JSON.stringify(convertedData);
-    const stringDataDisplay = JSON.stringify(convertedData, null, "   ");
+    const stringData = JSON.stringify(converter(inputData));
 
     return ImageTemplate.then(function (imageTemplate) {
 
@@ -180,12 +185,11 @@ function performConversion(inputData) {
         outputImage.src = encodedUrl;
 
         $("#image-output").html("").append(outputImage);
-        $("#output-text").val(stringDataDisplay);
+        $("#output-text").val(stringData);
 
-        $("#output-text-container").show();
-        $("#image-output-container").show();
+        outputContainer.slideDown(250);
 
-        scrollTo("#image-output")
+        scrollTo("#output-container")
     });
 }
 
@@ -194,5 +198,6 @@ function scrollTo(hash, speed) {
 }
 
 setTimeout(()=> {
+    outputContainer.slideUp();
     $(".cloaked").removeClass("cloaked");
 });

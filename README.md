@@ -6,6 +6,9 @@ to [KC3Kai](https://github.com/KC3Kai/KC3Kai)'s
 
 ## Change History
 
+- v0.1.1 (2017-08-16)
+    - Minor UI improvements
+
 - v0.1.0 (2017-08-16)
     - Added support for:
         - Combined fleet
