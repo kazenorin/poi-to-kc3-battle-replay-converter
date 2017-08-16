@@ -6,6 +6,13 @@ to [KC3Kai](https://github.com/KC3Kai/KC3Kai)'s
 
 ## Change History
 
+- v0.1.0 (2017-08-16)
+    - Added support for:
+        - Combined fleet
+        - LBAS fleet details
+        - Data conversion for PvP/Exercises
+            - However KanColle Replay does not seem to support this
+
 - v0.0.1 (2017-08-14)
     - First working version:
         - Importing:

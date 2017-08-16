@@ -3,6 +3,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+const version = require("./package.json").version;
+
 module.exports = {
     entry: {
         app: './src/index.js'
@@ -23,7 +25,7 @@ module.exports = {
             comments: false
         }),
         new HtmlWebpackPlugin({
-            title: 'POI Battle Detail to KC3Replay Converter',
+            title: `POI Battle Detail to KC3Replay Converter v${version}`,
             template: 'src/index.ejs'
         })
     ],
