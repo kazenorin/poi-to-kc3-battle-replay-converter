@@ -161,7 +161,7 @@ $("#convertData").on("click", () => {
 function isValidPoiData(inputData) {
     return inputData &&
         inputData.version >= 2.1 &&
-        inputData.map && inputData.map.length &&
+        inputData.map && Array.isArray(inputData.map) &&
         inputData.fleet && inputData.fleet.main && inputData.fleet.main.length &&
         inputData.packet && inputData.packet.length;
 }
