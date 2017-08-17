@@ -6,6 +6,11 @@ to [KC3Kai](https://github.com/KC3Kai/KC3Kai)'s
 
 ## Change History
 
+- v0.2.0 (2017-08-17)
+    - Added a limit on the data size for conversion
+    - Added 4 images of different resolution to support differ data size
+    - Use a slightly nicer output image
+
 - v0.1.1 (2017-08-16)
     - Minor UI improvements
 

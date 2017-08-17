@@ -2,7 +2,11 @@ import converter from "./converter";
 import $ from "jquery";
 
 import steganography from "../lib/steganography";
-import ImageTemplatePath from "./resources/simpleImage400px.png";
+
+import ImageTemplatePath300px from "./resources/template-image-300px.png";
+import ImageTemplatePath400px from "./resources/template-image-400px.png";
+import ImageTemplatePath500px from "./resources/template-image-500px.png";
+import ImageTemplatePath625px from "./resources/template-image-625px.png";
 
 import 'pure-css';
 import './resources/css/main.css';
@@ -18,12 +22,22 @@ import isGZip from "./isGZip"
 import Utf8ArrayToStr from "../lib/Utf8ArrayToStr";
 
 const MSG_INVALID_BATTLE_DETAIL_DATA = "Invalid POI Battle Detail data.";
+const MSG_BATTLE_DATA_EXCEED_CAP = "Data size exceeds capacity, reduce number of battles included!";
 
-const ImageTemplate = new Promise(resolve => {
-    const img = new Image();
-    $(img).on('load', () => resolve(img));
-    img.src = ImageTemplatePath;
-});
+const ImageTemplates = Promise.all([
+    loadSteganographyImage(ImageTemplatePath300px, 15000),
+    loadSteganographyImage(ImageTemplatePath400px, 27500),
+    loadSteganographyImage(ImageTemplatePath500px, 45000),
+    loadSteganographyImage(ImageTemplatePath625px, 70000)
+]);
+
+function loadSteganographyImage(path, capacityThreshold) {
+    return new Promise(resolve => {
+        const image = new Image();
+        $(image).on('load', () => resolve({image, capacityThreshold}));
+        image.src = path;
+    });
+}
 
 Dropzone.autoDiscover = false;
 const dzPreviewTemplate = $("#dropzone-template").remove().html();
@@ -178,13 +192,23 @@ function performConversion(inputData) {
 
     const stringData = JSON.stringify(converter(inputData));
 
-    return ImageTemplate.then(function (imageTemplate) {
+    return ImageTemplates.then(function (imageTemplates) {
+        const errorElm = outputContainer.find(".error-message");
 
-        const encodedUrl = steganography.encode(stringData, imageTemplate);
-        const outputImage = new Image();
-        outputImage.src = encodedUrl;
+        const dataSize = stringData.length;
+        const imageTemplate = _.find(imageTemplates, ({capacityThreshold})=> capacityThreshold > dataSize);
 
-        $("#image-output").html("").append(outputImage);
+        if (imageTemplate && imageTemplate.image) {
+            const encodedUrl = steganography.encode(stringData, imageTemplate.image);
+            const outputImage = new Image();
+            outputImage.src = encodedUrl;
+
+            $("#image-output").html("").append($(outputImage).css("max-width", "400px"));
+            errorElm.hide();
+        } else {
+            reportError(errorElm, MSG_BATTLE_DATA_EXCEED_CAP)
+        }
+
         $("#output-text").val(stringData);
 
         outputContainer.slideDown(250);
