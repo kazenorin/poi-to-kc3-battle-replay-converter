@@ -26,7 +26,7 @@ export default function (poiDataList) {
 };
 
 function getWorld(poiDataList) {
-    return _.get(poiDataList[0], ["map", 0]);
+    return _.get(poiDataList[0], ["map", 0], 0);
 }
 
 function getMap(poiDataList) {
