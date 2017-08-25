@@ -54,7 +54,7 @@ All KC3K fields:
     "world": "Integer:map[0]",
     "mapnum": "Integer:map[1]",
     "fleetnum": 1,                      // Presumably corresponds to fleet one to four
-    "combined": 0,                      // 0 or 1 boolean flag
+    "combined": "Integer:fleet.type",   // 0: Single Fleet, 1: CTF, 2: STF, 3:TCF
     "fleet1": ["..."],
     "fleet2": ["..."],
     "fleet3": ["..."],

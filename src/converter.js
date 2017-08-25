@@ -11,7 +11,7 @@ export default function (poiDataList) {
         "world": getWorld(poiDataList),
         "mapnum": getMap(poiDataList),
         "fleetnum": 1,
-        "combined": escortFleet && escortFleet.length ? 1 : 0,
+        "combined": getCombinedType(poiDataList),
         "fleet1": getFleet(poiDataList, PoiFleets.main),
         "fleet2": escortFleet,
         "fleet3": getFleet(poiDataList, PoiFleets.support),
@@ -35,6 +35,10 @@ function getMap(poiDataList) {
 
 function getSortieTime(poiDataList) {
     return parseInt((poiDataList[0].time ? poiDataList[0].time : Date.now()) / 1000);
+}
+
+function getCombinedType(poiDataList) {
+    return _.get(poiDataList[0], ["fleet", "type"], 0);
 }
 
 function getFleet(poiDataList, poiFleetKey, isBossSupport) {
