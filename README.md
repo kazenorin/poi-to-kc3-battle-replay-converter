@@ -6,6 +6,10 @@ to [KC3Kai](https://github.com/KC3Kai/KC3Kai)'s
 
 ## Change History
 
+- v0.3.0 (2017-08-25)
+    - Fixed incorrect combined fleet interpretation: every combined fleet was recognized as CTFs before
+    - Fixed incorrect PvP recognition: PvP was not properly recognized before
+
 - v0.2.0 (2017-08-17)
     - Added a limit on the data size for conversion
     - Added 4 images of different resolution to support differ data size
