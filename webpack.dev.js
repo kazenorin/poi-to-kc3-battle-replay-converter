@@ -8,7 +8,7 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['dev-build']),
         new HtmlWebpackPlugin({
             title: 'POI Battle Detail to KC3Replay Converter (DEV)',
             template: 'src/index.ejs'
@@ -16,7 +16,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dev-build')
     },
     module: {
         rules: [
