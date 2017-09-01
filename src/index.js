@@ -145,6 +145,7 @@ $("#loadFiles").on("click", () => {
     }).map(dataString => {
         return JSON.parse(dataString);
     }).then(results => {
+        results.sort((a, b)=> (a && a.time ? a.time : 0) - (b && b.time ? b.time : 0));
         return performConversion(results);
     }).catch(error => {
         console.error(error);
