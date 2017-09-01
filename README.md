@@ -7,6 +7,8 @@ to [KC3Kai](https://github.com/KC3Kai/KC3Kai)'s
 ## Change History
 - v0.4.0 (2017-09-01)
     - Upload by file enhancements: now automatically reorders battle by poi recorded timestamp
+    - Added dynamically generated template image
+    - Support customized string for owner and caption
 
 - v0.3.0 (2017-08-25)
     - Fixed incorrect combined fleet interpretation: every combined fleet was recognized as CTFs before
