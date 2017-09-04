@@ -1,10 +1,51 @@
 import moment from "moment";
+import Promise from "bluebird";
+import _ from "lodash";
+import {
+    url as shipImageUrl,
+    imageFilename as shipImageFilename,
+    imageDimensions as shipImageDimensions
+} from "./constants/ship-images"
 
 const titleText = "POI to KC3-Replayer";
 const toWatchCaption = "To watch, upload to: ";
 const replayerUrl = "https://bit.ly/kc3-replayer";
 
-const fixedUsedSpace = 120; // 120px constant
+const fixedUsedHeight = 150; // 150px constant
+const fixedUsedWidth = 13 + 8; // 13px left-margin, 8px right margin
+const initialX = 12, initialY = 96;
+const shipImageSpacingX = 3; // 3px spacing
+const shipImageSpacingY = 3; // 3px spacing
+
+import loadImage from "./promise-load-image";
+const loadShipImage = function (ship) {
+    // Images provided by: Daiblohu https://github.com/Diablohu/WhoCallsTheFleet-Pics
+    // which is a project of: "WhoCallsTheFleet" http://fleet.diablohu.com/
+    const id = ship.mst_id;
+    return loadImage(`${shipImageUrl}/${id}/${shipImageFilename}`)
+        .then(image => ({id, image}));
+};
+
+const calculatePreferredDimensions = function (availableX, availableY, involvedShips) {
+    // ShipImgDimensions = 160x40
+    let preferredDimensions = {width: shipImageDimensions.width, height: shipImageDimensions.height};
+
+    if (availableX < preferredDimensions.width * (involvedShips > 1 ? 2 : 1) + shipImageSpacingX) {
+        // Shrink dimensions
+        let newPreferredWidth = Math.round((availableX - shipImageSpacingX) / (involvedShips > 1 ? 2 : 1));
+        preferredDimensions.height = Math.round(preferredDimensions.height * (newPreferredWidth / preferredDimensions.width));
+        preferredDimensions.width = newPreferredWidth;
+    }
+
+    if (availableY < (preferredDimensions.height + shipImageSpacingY) * Math.floor(involvedShips / 2) - shipImageSpacingY) {
+        // Shrink dimensions
+        let newPreferredHeight = Math.round(((availableY + shipImageSpacingY) / involvedShips) - shipImageSpacingY);
+        preferredDimensions.width = Math.round(preferredDimensions.width * (newPreferredHeight / preferredDimensions.height));
+        preferredDimensions.height = newPreferredHeight;
+    }
+
+    return preferredDimensions;
+};
 
 export default function createTemplateImage(w, h, replayData, poiData, owner) {
     const mapId = `${replayData.world}-${replayData.mapnum}`,
@@ -18,7 +59,8 @@ export default function createTemplateImage(w, h, replayData, poiData, owner) {
     const ctx = canvas.getContext("2d");
 
     const dateTime = moment(timestamp).format("MMMM Do YYYY, h:mm:ss a");
-    const availableSpace = h - fixedUsedSpace;
+    const availableHeight = h - fixedUsedHeight;
+    const availableWidth = w - fixedUsedWidth;
 
     // << Background start /
     const grd = ctx.createRadialGradient(w / 2, 0, 0, w / 2, 0, Math.max(w, h));
@@ -80,5 +122,35 @@ export default function createTemplateImage(w, h, replayData, poiData, owner) {
     ctx.fillText(replayerUrl, 12, h - 10);
     // / Footer end >>
 
-    return canvas;
+    // << ----- Asynchronous Start /-----
+
+    return Promise.map(replayData.fleet1, loadShipImage)
+        .then(shipImages => {
+
+            // << Ship Images start /
+
+            const involvedShips = _.filter(replayData.fleet1, ship => ship != null && _.isInteger(parseInt(ship.mst_id)));
+            const preferredDimensions = calculatePreferredDimensions(availableWidth, availableHeight, involvedShips.length);
+
+            ctx.shadowColor = "hsl(0, 0%, 33%)";
+            ctx.shadowOffsetX = 1;
+            ctx.shadowOffsetY = 1;
+            ctx.shadowBlur = 2;
+
+            _.forEach(involvedShips, (ship, i) => {
+                const imgDef = _.find(shipImages, {id: ship.mst_id});
+                if (imgDef) {
+                    let x = initialX + (i % 2 * (shipImageSpacingX + preferredDimensions.width));
+                    let y = initialY + Math.floor(i / 2) * (shipImageSpacingY + preferredDimensions.height);
+
+                    ctx.drawImage(imgDef.image, x, y, preferredDimensions.width, preferredDimensions.height);
+                }
+            });
+
+            // / Ship Images end >>
+
+            return canvas;
+        });
+
+    // -----/ Asynchronous End ----- >>
 };

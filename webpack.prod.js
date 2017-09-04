@@ -25,7 +25,8 @@ module.exports = {
             comments: false
         }),
         new HtmlWebpackPlugin({
-            title: `POI Battle Detail to KC3Replay Converter v${version}`,
+            title: `POI Battle Results to KC3-Replayer Converter v${version}`,
+            version: version,
             template: 'src/index.ejs'
         })
     ],

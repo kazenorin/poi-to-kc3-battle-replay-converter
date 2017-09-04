@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const version = require("./package.json").version;
 
 module.exports = {
     entry: {
@@ -10,7 +11,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dev-build']),
         new HtmlWebpackPlugin({
-            title: 'POI Battle Detail to KC3Replay Converter (DEV)',
+            title: 'POI Battle Results to KC3-Replayer Converter (DEV)',
+            version: version,
             template: 'src/index.ejs'
         })
     ],

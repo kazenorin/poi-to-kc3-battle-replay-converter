@@ -179,21 +179,22 @@ function performConversion(inputData) {
         dim += 50;
     }
 
-    const canvas = createTemplateImage(dim, dim, outputData, inputData, $("#ownerCaption").val());
+    return createTemplateImage(dim, dim, outputData, inputData, $("#ownerCaption").val())
+        .then(canvas => {
 
-    const encodedUrl = steganography.encode(stringData, canvas);
-    const outputImage = new Image();
-    outputImage.src = encodedUrl;
+            const encodedUrl = steganography.encode(stringData, canvas);
+            const outputImage = new Image();
+            outputImage.src = encodedUrl;
 
-    $("#image-output").html("").append($(outputImage).css("max-width", "400px"));
-    outputContainer.find(".error-message").hide();
+            $("#image-output").html("").append($(outputImage).css("max-width", "400px"));
+            outputContainer.find(".error-message").hide();
 
-    $("#output-text").val(stringData);
+            $("#output-text").val(stringData);
 
-    outputContainer.slideDown(250);
+            outputContainer.slideDown(250);
 
-    scrollTo("#output-container");
-
+            scrollTo("#output-container");
+        });
 }
 
 function scrollTo(hash, speed) {
