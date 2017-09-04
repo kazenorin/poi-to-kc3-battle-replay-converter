@@ -7,7 +7,7 @@ export default function (path) {
         const $image = $(image);
 
         $image.on('load', () => resolve(image));
-        $image.on('error', () => reject());
+        $image.on('error', () => reject(new Error("Cannot load image")));
 
         image.crossOrigin = 'Anonymous';
         image.src = path;
