@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POI Battle Detail to KC3Replay Converter v0.4.0</title>
+    <title>POI Battle Results to KC3-Replayer Converter v1.0.0-alpha</title>
     <style type="text/css">.cloaked{display: none}</style>
 </head>
 <body>
 
 <div id="layout" class="cloaked">
     <div class="header">
-        <h1>Poi2KC3Kai</h1>
-        <h2>Convert Poi BattleDetail to KC3Kai Replay format</h2>
+        <h1>Poi2KC3Replayer</h1>
+        <h2>Convert Poi Battle Results to KC3-Replayer format (v1.0.0-alpha)</h2>
     </div>
 
     <div class="content">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="pure-u-1 clearfix">
-                <button id="convertData" class="pure-button pure-button-primary">Convert</button>
+                <button id="convertData" class="pure-button pure-button-primary conversion-progress-loader">Convert</button>
             </div>
         </div>
         <div class="pure-form accordion-members" id="upload-data">
@@ -63,8 +63,8 @@
                 </div>
             </div>
             <div class="pure-u-1 clearfix">
-                <button id="loadFiles" class="pure-button pure-button-primary">Load Files</button>
-                <button id="loadSample" class="pure-button pull-right">Load Sample</button>
+                <button id="loadFiles" class="pure-button pure-button-primary conversion-progress-loader">Load Files</button>
+                <button id="loadSample" class="pure-button pull-right conversion-progress-loader">Load Sample</button>
             </div>
         </div>
         <div class="pure-g pure-form cloaked" id="output-container">
@@ -74,12 +74,12 @@
             </div>
             <div class="pure-u-1-2 pure-g" id="image-output-container">
                 <label class="pure-u-1">Image Output: </label>
-                <div class="pure-u-1" id="image-output"></div>
+                <div class="pure-u-1" id="image-output"><div class='w3-loader'></div></div>
                 <div class="pure-u-1 error-message color-error" style="display: none; padding: 5px">Error</div>
             </div>
             <div class="pure-u-1 clearfix">
                 <a class="pull-left" target="_blank" href="https://kc3kai.github.io/kancolle-replay/battleplayer.html">
-                    KanColle Replay
+                    KanColle Replayer
                 </a>
                 <a class="pull-right" href="https://github.com/kazenorin/poi-to-kc3-battle-replay-converter#change-history">
                     Change Log
