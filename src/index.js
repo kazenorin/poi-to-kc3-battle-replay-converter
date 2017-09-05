@@ -6,6 +6,7 @@ import steganography from "../lib/steganography";
 
 import 'pure-css';
 import './resources/css/main.css';
+import './resources/css/w3-loader.css';
 
 import Dropzone from 'dropzone';
 import 'dropzone/dist/dropzone.css';
@@ -88,6 +89,7 @@ firstPasteDataRow.find("textarea").on("change", function dataPasteHandler(e) {
 const pasteDataRowTemplate = firstPasteDataRow.clone(true);
 
 const outputContainer = $("#output-container");
+const conversionProgressors = $(".conversion-progress-loader");
 
 function updateRowCounter() {
     pasteDataContainer.find(".battle-counter").each((i, elm) => {
@@ -170,6 +172,10 @@ function isValidPoiData(inputData) {
 }
 
 function performConversion(inputData) {
+
+    conversionProgressors.prop('disabled', true).removeClass("inactive");
+    const imageOutput = $("#image-output").addClass("loading").empty("img");
+
     const outputData = converter(inputData);
     const stringData = JSON.stringify(outputData);
     const dataSize = stringData.length;
@@ -186,14 +192,18 @@ function performConversion(inputData) {
             const outputImage = new Image();
             outputImage.src = encodedUrl;
 
-            $("#image-output").html("").append($(outputImage).css("max-width", "400px"));
+            imageOutput.removeClass("loading").append($(outputImage).css("max-width", "400px"));
             outputContainer.find(".error-message").hide();
+
+            outputContainer.slideDown(250);
+            scrollTo("#output-container");
 
             $("#output-text").val(stringData);
 
-            outputContainer.slideDown(250);
-
-            scrollTo("#output-container");
+        })
+        .finally(() => {
+            imageOutput.removeClass("loading");
+            conversionProgressors.prop('disabled', false).addClass("inactive");
         });
 }
 
@@ -203,5 +213,7 @@ function scrollTo(hash, speed) {
 
 setTimeout(()=> {
     outputContainer.slideUp();
+    conversionProgressors.addClass("inactive").prepend("<i class='w3-loader w3-loader-tiny'></i>");
+
     $(".cloaked").removeClass("cloaked");
 });

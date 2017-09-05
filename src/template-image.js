@@ -16,7 +16,7 @@ const fixedUsedWidth = 13 + 8; // 13px left-margin, 8px right margin
 const initialX = 12, initialY = 96;
 const shipImageSpacingX = 3; // 3px spacing
 const shipImageSpacingY = 3; // 3px spacing
-const fleetSpacingX = 18 // For combined fleets
+const fleetSpacingX = 18; // For combined fleets
 
 import loadImage from "./promise-load-image";
 const loadShipImage = function (ship) {
